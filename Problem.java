@@ -6,7 +6,7 @@ public class Problem {
 
 	public static void main(String[] args) {
 
-		pi();
+		ch4e5();
 		
 	}
 
@@ -24,7 +24,7 @@ public class Problem {
 		
 	}
 	
-	public static void chp29() {
+	public static void ch1p29() {
 		
 		int a, n;
 		Scanner in = new Scanner(System.in);
@@ -76,7 +76,7 @@ public class Problem {
         Scanner input = new Scanner (System.in);
         System.out.println("Enter number of terms");
         double i = input.nextDouble();
-            double sum = 0;
+        double sum = 0;
         for(i=0; i<10000; i++){
         	if(i%2 == 0)
         		sum += -1 / ( 2 * i - 1);
@@ -86,4 +86,71 @@ public class Problem {
         System.out.println(sum);
 			
 	}
+	
+	public static void ch3e3() {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Score: ");		
+		String x = in.next().
+				   toLowerCase(); // redundant
+			if (x.equalsIgnoreCase("y") || x.equalsIgnoreCase("yes")) {
+				System.exit(0);
+			} else {
+				System.out.println("incorrect input");
+			}
+			
+	}
+
+
+	public static void ch4e1a() {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("dfdgfd: ");		
+		String x = in.next();
+		while (x != "done") {
+			int xl = x.length();
+			if (x.charAt(0) == x.charAt(x.length()-1)) {
+				System.out.println("Yes");
+			} else {
+				System.out.println("No");
+			}
+			x = in.next();
+		}
+		
+	}
+	
+	public static void ch4e1b() {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("dfdgfd: ");		
+		String x = in.next();
+		do {
+			int xl = x.length();
+			if (x.charAt(0) == x.charAt(x.length()-1))
+				System.out.println("Yes");
+			else
+				System.out.println("No");
+			x = in.next();
+		} while (x != "done");
+		
+	}
+	
+	public static void ch4e5() {
+		// this doesn't make any sense
+		int s = 7;
+		int t = 7;
+		for (int i = 0; i < 10; i++) {
+			s = s + i;
+			System.out.println("T is not " + t);
+			for (int j = i; j > 0; j--) {
+				t = t * (j - i);
+				System.out.println("T is also not " + t);
+			}
+			s = s * t;
+			System.out.println("T is " + t);
+		}
+		System.out.println("S is " + s);
+	}
+		
+	
 }
